@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- author king -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/p_popup_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   
+    >
+
+    <!-- 显示的高度跟这个LinearLayout的background的大小有关，以及和item里面的backgroud有关 -->
+    <!-- 用来显示popupwindow中的列表项 -->
+
+    <LinearLayout
+         android:id="@+id/pop_ll_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/base10dp"
+        android:paddingRight="@dimen/base10dp" >
+
+        <ListView
+            android:id="@+id/path_popupwindow_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/pop_ll_corners"
+            android:divider="@color/pop_line"
+            android:dividerHeight="@dimen/base1dp" />
+
+        <Button
+            android:id="@+id/bt_my_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/base40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/base20dp"
+            android:layout_marginTop="@dimen/base10dp"
+            android:background="@drawable/pop_bt_corners"
+            android:text="取消"
+            android:textColor="@color/pop_text_color"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</RelativeLayout>
